@@ -1,0 +1,5 @@
+command			Description 		Syntex
+cat			-Command used for 
+			writting content on a file
+syntex cat >> filename {ENTER}
+then press {ENTER}

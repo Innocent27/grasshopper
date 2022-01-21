@@ -1,0 +1,254 @@
+.alumni-carousel {
+  position: relative;
+  width: 100%;
+}
+.alumni-carousel .alumni-carousel-container{
+  grid-area: content;
+  position: relative;
+}
+.alumni-carousel-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.alumni-carousel-slide {
+  position: absolute;
+  display: flex;
+  /* top: 0;
+  bottom: 0; */
+  /* left: 0;
+  right: 0; */
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  overflow: hidden;
+}
+.alumni-carousel-headers .section-heading {
+  font-weight: 1000;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #FFFFFF;
+}
+.alumni-carousel-slide.active {
+  z-index: 2;
+  opacity: 1;
+}
+.alumni-carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+}
+.alumni-carousel-title {
+  color:#acacac;
+  font-weight: 900;
+  font-size: 0.75em;
+  font-family: 'BGrotesqueMed', sans-serif;
+  text-transform: uppercase;
+}
+.alumni-carousel-title span {
+  text-transform: capitalize;
+}
+.alumni-content-subheading {
+  /* color: var(--red); */
+  text-transform: uppercase;
+  font-size: 0.9em;
+  transition: color 0.3s linear;
+}
+.alumni-content-description {
+  font-size: 1em;
+  color: #acacac;
+  margin-bottom: 2%;
+  line-height: 1.3em;
+}
+.alumni-content-description span {
+  font-weight: 700;
+}
+.alumni-carousel-img {
+  width: 50%;
+  object-fit: contain;
+}
+.alumni-carousel-left,
+.alumni-carousel-right {
+  position: absolute;
+  bottom: 50%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4em;
+  transition: color 0.3s linear;
+  color: white;
+}
+/* 
+.red .alumni-carousel-left,
+.red .alumni-carousel-right {
+  color: var(--red);
+}
+.blue .alumni-carousel-left,
+.blue .alumni-carousel-right {
+  color: var(--purple);
+}
+.yellow .alumni-carousel-left,
+.yellow .alumni-carousel-right {
+  color: var(--green);
+} */
+.red .alumni-carousel-left:hover,
+.red .alumni-carousel-right:hover {
+  color: var(--red);
+}
+.blue .alumni-carousel-left:hover,
+.blue .alumni-carousel-right:hover {
+  color: var(--purple);
+}
+.yellow .alumni-carousel-left:hover,
+.yellow .alumni-carousel-right:hover {
+  color: var(--green);
+}
+.alumni-carousel-left {
+  left: -50px;
+}
+.alumni-carousel-right {
+  right: -50px;
+}
+.alumni-open-modal,
+.alumni-close-modal {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background: #FFFFFF;
+  color: #acacac;
+  /* text-transform: uppercase; */
+  padding: 0.5em;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: color 0.2s linear;
+  text-decoration: none;
+}
+.red .alumni-open-modal:hover {
+  color: white;
+  background:var(--red);
+  transition: 0.2s linear ;
+}
+.yellow .alumni-open-modal:hover {
+  color: white;
+  background: var(--green);
+  transition: 0.2s linear ;
+}
+.blue .alumni-open-modal:hover {
+  color: white;
+  background:var(--purple);
+  transition: 0.2s linear;
+}
+.alumni-close-modal {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2em;
+}
+/* .alumni-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.2s linear;
+  background: var(--blue);
+  padding: 5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+  gap: 20px;
+} */
+
+.alumni-modal.portfolio-modal {
+  top: 16%;
+  left: 10%;
+  bottom: 16%;
+  right: 10%;
+}
+.alumni-modal.active {
+  opacity: 1;
+  z-index: 4;
+}
+.alumni-modal-headings {
+  margin-bottom: 20px;
+}
+
+.alumni-modal-heading {
+  text-transform: uppercase;
+  color: black;
+  font-size: 3em;
+  font-weight: 1000;
+}
+.alumni-modal-subheading {
+  text-transform: uppercase;
+  color: white;
+}
+.alumni-modal-content {
+  color: black;
+}
+@media screen and (max-width: 630px){
+  .team-banner .alumni-carousel {
+    padding: 8%;
+  }
+  .alumni-carousel-slide {
+    left: 0;
+    right: 0;
+  }
+  .alumni-carousel-headers .section-heading{
+    font-size: 2em;
+  }
+  iframe{
+    width: 19em;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 630px) {
+  .alumni-carousel-img {
+    display: none;
+  }
+  .alumni-modal {
+    margin: 40% 0;
+  }
+  .alumni-modal-heading {
+    font-size: 2em;
+  }
+  .alumni-carousel-container {
+    font-size: 10px;
+  }
+  .alumni-carousel-right{
+    right: 20%;
+    bottom: 5%;
+  }
+  .alumni-carousel-left{
+    left: 20%;
+    bottom: 5%;
+  }
+}
+@media screen and (min-width: 631px) {
+  .team-banner .alumni-carousel {
+    padding: 1%;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+    /*
+      Define here the CSS styles applied only to Safari browsers
+      (any version and any device)
+     */
+    .alumni-carousel-section,
+    .alumni-open-modal,
+    .alumni-modal-content {
+      margin-top: 20px;
+  }
+}

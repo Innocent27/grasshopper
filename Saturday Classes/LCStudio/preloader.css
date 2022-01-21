@@ -1,0 +1,62 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+#loader-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../images/bg-2.jpg");
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  z-index: 100;
+  -webkit-animation: disappear 5s ease-in-out forwards;
+  animation: disappear 5s ease-in-out forwards;
+}
+
+.logo {
+  -webkit-animation: preload 5s ease-in-out forwards;
+  animation: preload 5s ease-in-out forwards;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 100;
+  }
+  100% {
+    z-index: -2;
+    opacity: 0;
+  }
+}
+
+@keyframes preload {
+  0% {
+    left: 45%;
+    top: 45%;
+    transform: scale(3);
+  }
+  90% {
+    left: 45%;
+    top: 45%;
+    transform: scale(3);
+  }
+  100% {
+    top: 2%;
+    left: 5%;
+    transform: scale(1);
+  }
+}

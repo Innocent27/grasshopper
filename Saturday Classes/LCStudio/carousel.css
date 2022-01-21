@@ -1,0 +1,101 @@
+/* Carousel Element */
+.carousel {
+  display: grid;
+  grid-template-columns: 30px 70vw 30px;
+  grid-template-rows: 50vh auto;
+  grid-template-areas:
+    "leftCaret content rightCaret"
+    "......... bullets ..........";
+}
+/* Carousel Carets */
+.carousel .carousel-left,
+.carousel .carousel-right {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4em;
+  transition: color 0.3s linear;
+  color: white;
+}
+/* .red .carousel .carousel-left,
+.red .carousel .carousel-right {
+  color: var(--red);
+}
+.blue .carousel .carousel-left,
+.blue .carousel .carousel-right {
+  color: var(--purple);  
+}
+.yellow .carousel .carousel-left,
+.yellow .carousel .carousel-right {
+  color: var(--green);
+} */
+.red .carousel .carousel-left:hover,
+.red .carousel .carousel-right:hover {
+  color: var(--red);
+}
+.blue .carousel .carousel-left:hover,
+.blue .carousel .carousel-right:hover {
+  color: var(--purple);
+}
+.yellow .carousel .carousel-left:hover,
+.yellow .carousel .carousel-right:hover {
+  color: var(--green);
+}
+/* Carousel Grid Item Positioning */
+.carousel .carousel-left {
+  grid-area: leftCaret;
+}
+.carousel .carousel-right {
+  grid-area: rightCaret;
+}
+.carousel .carousel-container {
+  grid-area: content;
+  position: relative;
+}
+.carousel #carousel-bullets {
+  grid-area: bullets;
+}
+/* Carousel Bullet Styles */
+#carousel-bullets .carousel-bullet {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 2px;
+  cursor: pointer;
+}
+.carousel #carousel-bullets .fas.fa-circle {
+  transition: color 0.3s linear;
+}
+.carousel #carousel-bullets .fas.fa-circle.active {
+  color: white;
+}
+/* Carousel Slide Styles */
+.carousel-slide {
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+/* Carousel Content Styles */
+.carousel-slide .carousel-title {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  transition: color 0.3s;
+}
+.carousel-slide .carousel-description {
+  color: white;
+  font-size: 1.3em;
+  font-style: italic;
+}

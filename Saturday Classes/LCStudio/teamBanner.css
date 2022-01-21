@@ -1,0 +1,322 @@
+.team-banner{
+  padding: 10%;
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+} 
+
+.team-banner.active {
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Carousel Element */
+.team-banner .carousel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "content";
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .team-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1023.9px) {
+  .team-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 631px) {
+  .team-banner .carousel {
+    padding: 16%;
+  }
+}
+
+#partners {
+  display: block !important;
+}
+/* Carousel Carets */
+.carousel .carousel-left,
+.carousel .carousel-right {
+  position: absolute;
+  bottom: 50%;
+  z-index: 20;
+}
+.carousel .carousel-left {
+  left: -80px;
+}
+.carousel .carousel-right {
+  right: -80px;
+}
+.fab.border {
+  border: 2px solid grey;
+  border-radius: 50%;
+  padding: 10px;
+  color: grey;
+  font-size: 1.5em;
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.team-carousel-slider {
+  display: flex;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.team-banner-slide {
+  display: flex;
+}
+.team-banner-content {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}
+.team-carousel-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-basis: 40%;
+  text-align: left;
+}
+.team-carousel-content {
+  row-gap: 20px;
+}
+.team-carousel-links a {
+  text-decoration: none;
+}
+.team-carousel-links a:hover i {
+  color: white;
+  border-color: white;
+}
+.team-banner-landing-button {
+  cursor: pointer;
+}
+
+.team-banner-heading,
+.team-banner-subheading {
+  /* color: white; */
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+.team-banner-content .team-banner-description {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: color 0.2s linear;
+}
+.red .team-banner-description {
+  color: var(--red);
+}
+.blue .team-banner-description {
+  color: var(--purple);
+}
+.yellow .team-banner-description {
+  color: var(--green);
+}
+.team-banner-content .team-banner-heading,
+.team-banner-content .section-heading,
+.team-banner-content .team-banner-description {
+  text-align: left;
+}
+.team-banner-link {
+  text-decoration: none;
+  color: white;
+  border: 1px solid var(--red);
+  padding: 1% 3%;
+  border-radius: 20px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.team-banner-link:hover {
+  background: var(--red);
+}
+.team-banner-image {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 30%;
+  width: 30%;
+  max-height: 80vh;
+  object-fit: contain;
+  transform: scale(1.5) translateX(15%) translateY(10%);
+}
+.team-banner-image.ZN{
+  flex-grow: 0.8;
+}
+
+div[banner="landing"].active ~ .team-banner-button-container {
+  display: none;
+}
+div[banner="team"].active
+  ~ .team-banner-button-container
+  .team-banner-button:nth-of-type(1),
+/* div[banner="partners"].active
+  ~ .team-banner-button-container
+  .team-banner-button:nth-of-type(2), */
+div[banner="alumni"].active
+  ~ .team-banner-button-container
+  .team-banner-button:nth-of-type(2) {
+  color: white;
+}
+
+.team-banner-button-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  z-index: 4 !important;
+}
+.team-banner-button {
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: -4%;
+  padding: 2%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  font-size: 0.625em;
+}
+.team-banner-button:hover {
+  color: white;
+}
+.team-banner-button.active {
+  color: white;
+  cursor: not-allowed;
+}
+.team-skill-name {
+  color: #acacac;
+}
+.team-skill-meter {
+  width: 100%;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  .team-skill-meter {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+.red .team-skill-meter::-webkit-meter-bar {
+  background: var(--red);
+  border: none;
+  outline: none;
+  height: 3px;
+  overflow: visible;
+}
+.blue .team-skill-meter::-webkit-meter-bar {
+  background: var(--purple);
+  border: none;
+  outline: none;
+  height: 4px;
+  overflow: visible;
+}
+.yellow .team-skill-meter::-webkit-meter-bar {
+  background: var(--green);
+  border: none;
+  outline: none;
+  height: 4px;
+  overflow: visible;
+}
+
+.team-skill-meter::-webkit-meter-optimum-value {
+  height: 5px;
+  border: none;
+  transform: translateY(-1.5px);
+  transition: background-color 0.3s linear;
+}
+.team-skill-meter::-webkit-meter-optimum-value {
+  background: white;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  .team-carousel-links {
+    margin-bottom: 20px;
+  }
+}
+.plus {
+  color: white !important;
+}
+@media screen and (max-width: 320px) {
+  .team-banner-button{
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 630px){
+  .carousel .carousel-left {
+    left: 20%;
+    bottom: 5%;
+  }
+  .carousel .carousel-right {
+    right: 20%;
+    bottom: 5%;
+  }
+}
+@media screen and (max-width: 630px) {
+  [banner="alumni"]{
+    padding: 20%;
+  }
+  [banner="team"]{
+    padding: 20%;
+  }
+  .team-carousel-slider {
+    position: relative;
+  }
+  .team-banner-content {
+    justify-content: center;
+    row-gap: 40px;
+  }
+  .team-banner-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -50%;
+    z-index: -1;
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  .team-banner-button{
+    font-size: 1em;
+  }
+  [banner="partners"] {
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 30% 20%;
+    justify-content: flex-start;
+  }
+  /* .partners-right {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  } */
+  .partner-img {
+    height: 20%;
+    width: 100%;
+    object-position: left;
+  }
+  .partner-img:last-of-type {
+    height: 40%;
+  }
+  .partners-right{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}

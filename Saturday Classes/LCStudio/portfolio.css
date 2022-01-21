@@ -1,0 +1,85 @@
+.portfolio-banner{
+  padding: 10%;
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+  
+.portfolio-banner.active {
+  z-index: 2;
+  opacity: 1;
+}
+@media screen and (max-width: 414px) {
+  .portfolio-banner{
+    padding: 5%;
+  }
+  .portfolio-carousel-content{
+    padding: 6%;
+    height: 145%;
+  }
+  .red .portfolio-view-button {
+    font-size: 1.05em;
+  }
+  .yellow .portfolio-view-button {
+    font-size: 1.05em;
+  }
+  .blue .portfolio-view-button {
+    font-size: 1.05em;
+  } 
+  .mobile-right {
+    right: -16px;
+  }
+}
+
+.portfolio-banner-button {
+  color: white;
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: -4%;
+  padding: 2%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  font-size: 0.625em;
+}
+
+.red .portfolio-banner-button:hover {
+  color: var(--red);
+}
+
+.blue .portfolio-banner-button:hover {
+  color: var(--purple);
+}
+
+.yellow .portfolio-banner-button:hover {
+  color: var(--green);
+}
+
+/* .activeP {
+  text-transform: uppercase;
+  margin-right: 20px;
+  margin-left: -4%;
+  padding: 2%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s linear;
+  font-size: 0.625em;
+}
+
+.red .activeP {
+  color: var(--red);
+}
+
+.blue .activeP {
+  color: var(--purple);
+}
+
+.yellow .activeP {
+  color: var(--green);
+} */
